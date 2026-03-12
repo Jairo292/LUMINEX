@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crear cuenta - Luminex Dental</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="stylesRegistrar.css" />
+  <style>
+    /* Icono de casa */
+    .home-icon {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 24px;
+        color: #2a9df4;
+        cursor: pointer;
+        z-index: 10;
+        transition: transform 0.3s ease;
+    }
+    .home-icon:hover {
+        transform: scale(1.1);
+        color: #1d7bc4;
+    }
+
+    /* Estilos base */
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #f3f9ff, #d6eaff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      animation: fadeIn 0.8s ease-in;
+      transition: background 0.3s ease;
+    }
+
+    /* Modo oscuro */
+    body.dark-mode {
+      background: linear-gradient(to bottom right, #3a3a3a, #3a3a3a);
+      color: #ffffff;
+    }
+
+    /* Modo normal (light) */
+    body.light-mode {
+      background: linear-gradient(to bottom right, #f3f9ff, #d6eaff);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .register-container {
+      width: 100%;
+      max-width: 420px;
+      padding: 40px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    body.dark-mode .register-container {
+      background: #2d3748;
+      color: #ffffff;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .register-logo {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .register-logo img {
+      height: 45px;
+    }
+
+    h1 {
+      font-size: 22px;
+      color: #2a9df4;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+
+    body.dark-mode h1 {
+      color: #63b3ed;
+    }
+
+    .form-group {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .form-group i {
+      position: absolute;
+      top: 50%;
+      left: 12px;
+      transform: translateY(-50%);
+      color: #aaa;
+      pointer-events: none;
+    }
+
+    body.dark-mode .form-group i {
+      color: #a0a0a0;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 12px 12px 12px 40px;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      font-size: 14px;
+      transition: 0.3s;
+      box-sizing: border-box;
+      background: #f8f9fa;
+    }
+
+    body.dark-mode .form-input {
+      background: #4a5568;
+      border-color: #4a5568;
+      color: #ffffff;
+    }
+
+    .form-input:focus {
+      border-color: #2a9df4;
+      box-shadow: 0 0 0 3px rgba(42, 157, 244, 0.15);
+      outline: none;
+    }
+
+    body.dark-mode .form-input:focus {
+      border-color: #63b3ed;
+      box-shadow: 0 0 0 3px rgba(99, 179, 237, 0.15);
+    }
+
+    .error-message {
+      color: #e74c3c;
+      font-size: 12px;
+      margin-top: 5px;
+      display: none;
+    }
+
+    .password-input {
+      position: relative;
+    }
+
+    .toggle-password {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      color: #aaa;
+    }
+
+    body.dark-mode .toggle-password {
+      color: #a0a0a0;
+    }
+
+    .register-btn {
+      width: 100%;
+      padding: 12px;
+      background-color: #2a9df4;
+      border: none;
+      color: white;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    body.dark-mode .register-btn {
+      background-color: #3182ce;
+    }
+
+    .register-btn:hover {
+      background-color: #1d7bc4;
+    }
+
+    .login-link {
+      text-align: center;
+      margin-top: 25px;
+      font-size: 14px;
+    }
+
+    .login-link a {
+      color: #2a9df4;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    body.dark-mode .login-link a {
+      color: #63b3ed;
+    }
+
+    .login-link a:hover {
+      text-decoration: underline;
+    }
+
+    .input-error {
+      border-color: #e74c3c !important;
+      background-color: #ffeeee !important;
+    }
+
+    body.dark-mode .input-error {
+      background-color: #4a1e1e !important;
+    }
+
+    #snackbar {
+      visibility: hidden;
+      min-width: 240px;
+      background-color: #2ecc71;
+      color: white;
+      text-align: center;
+      border-radius: 8px;
+      padding: 14px;
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 15px;
+      z-index: 9999;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      transition: opacity 0.5s ease, top 0.5s ease;
+    }
+
+    #snackbar.show {
+      visibility: visible;
+      opacity: 1;
+      top: 40px;
+    }
+
+    body.dark-mode .home-icon {
+      color: #a0a0a0;
+    }
+  </style>
+</head>
+<body>
+    <a href="index.html" class="home-icon" aria-label="Volver al inicio">
+        <i class="fas fa-home"></i>
+    </a>
+
+    <div class="register-container">
+        <div class="register-logo">
+            <img src="https://acdn-us.mitiendanube.com/stores/005/734/330/themes/common/logo-1131374604-1737670255-836905003dbe61f435d3b9aa1cd70d301737670255-320-0.webp" alt="Luminex Dental">
+        </div>
+        <h1>Crear cuenta</h1>
+        <form id="registerForm">
+            <div class="form-group">
+                <i class="fas fa-user"></i>
+                <input type="text" id="name" class="form-input" placeholder="Nombre" required />
+                <div class="error-message" id="nameError"></div>
+            </div>
+            <div class="form-group">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="email" class="form-input" placeholder="Correo electrónico" required />
+                <div class="error-message" id="emailError"></div>
+            </div>
+            <div class="form-group password-group">
+                <i class="fas fa-lock"></i>
+                <div class="password-input">
+                    <input type="password" id="password" class="form-input" placeholder="Contraseña" required minlength="6" />
+                </div>
+                <div class="error-message" id="passwordError"></div>
+            </div>
+            <div class="form-group password-group">
+                <i class="fas fa-check-double"></i>
+                <div class="password-input">
+                    <input type="password" id="confirmPassword" class="form-input" placeholder="Confirmar contraseña" required />
+                </div>
+                <div class="error-message" id="confirmPasswordError"></div>
+            </div>
+            <button type="submit" class="register-btn">Continuar</button>
+            <div class="login-link">
+                ¿Ya tienes una cuenta? <a href="login.html">Iniciar sesión</a>
+            </div>
+        </form>
+    </div>
+
+    <div id="snackbar">Registro exitoso 🎉</div>
+
+    <script src="script.js"></script>
+    <script>
+        // Aplicar tema al cargar la página
+        document.addEventListener('DOMContentLoaded', function() {
+            const preferences = JSON.parse(localStorage.getItem('accessibilityPreferences')) || {};
+            const themeMode = preferences.themeMode || 'device';
+            
+            applyTheme(themeMode);
+        });
+
+        function applyTheme(mode) {
+            // Primero removemos todas las clases de tema
+            document.body.classList.remove('dark-mode', 'light-mode');
+            
+            if (mode === 'device') {
+                // Usar el tema del dispositivo
+                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    document.body.classList.add('dark-mode');
+                } else {
+                    document.body.classList.add('light-mode');
+                }
+            } else if (mode === 'dark') {
+                document.body.classList.add('dark-mode');
+            } else {
+                // 'light' es el valor por defecto
+                document.body.classList.add('light-mode');
+            }
+        }
+
+        // Escuchar cambios en el tema del dispositivo si está en modo automático
+        const preferences = JSON.parse(localStorage.getItem('accessibilityPreferences')) || {};
+        if (preferences.themeMode === 'device') {
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+                applyTheme('device');
+            });
+        }
+    </script>
+</body>
+</html>

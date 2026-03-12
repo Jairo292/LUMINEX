@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productos - Luminex Dental</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <!-- Barra de navegación (COPIAR DESDE index.html) -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-top">
+        <!-- Logo -->
+        <a href="#" class="logo">
+          <img src="https://acdn-us.mitiendanube.com/stores/005/734/330/themes/common/logo-1131374604-1737670255-836905003dbe61f435d3b9aa1cd70d301737670255-320-0.webp" alt="Luminex Dental" />
+        </a>
+  
+        <!-- Buscador -->
+        <div class="search-container">
+          <input type="text" placeholder="Buscar productos..." />
+          <button type="submit"><i class="fas fa-search"></i></button>
+        </div>
+  
+        <!-- Menú de cuenta -->
+        <div class="account-container">
+          <div class="account-dropdown">
+            <button class="account-btn">Cuenta <i class="fas fa-chevron-down"></i></button>
+            <div class="dropdown-content" id="accountGuest" style="display: none;">
+              <form action="login.html" method="get">
+                <button type="submit" class="login-btn">Iniciar Sesión</button>
+              </form>
+              <div class="register-link">¿Eres nuevo? <a href="register.html">Registrar</a></div>
+            </div>
+            <div class="dropdown-content" id="accountLogged" style="display: none;">
+              <p>Hola, <span id="dropdownUserName"></span> 👋</p>
+              <button id="dropdownLogout" class="login-btn">Cerrar sesión</button>
+            </div>
+          </div>
+  
+          <!-- Botón principal -->
+          <a href="ComprarProducto.html" class="btn-comprar">COMPRAR AHORA</a>
+  
+          <!-- Menú de accesibilidad -->
+          <div class="accessibility-menu">
+            <button class="accessibility-btn" aria-label="Menú de accesibilidad">
+              <i class="fas fa-universal-access"></i>
+            </button>
+            <div class="accessibility-dropdown">
+              <!-- Contenido del menú de accesibilidad -->
+            </div>
+          </div>
+  
+          <!-- Ícono del carrito -->
+          <div class="cart-icon">
+            <button class="cart-btn" aria-label="Carrito de compras">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count">0</span>
+            </button>
+          </div>
+        </div>
+  
+        <!-- Menú móvil -->
+        <div class="menu-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+  
+      <!-- Navegación secundaria -->
+      <div class="nav-bottom">
+        <ul class="nav-menu">
+          <li><a href="index.html">Inicio</a></li> 
+          <li><a href="productos.html">Producto</a></li>
+          <li><a href="index.html#testimonios">Opiniones</a></li>
+          <li><a href="index.html#faq">Preguntas Frecuentes</a></li>
+          <li><a href="index.html#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contenido principal -->
+  <main class="products-container">
+    <!-- Filtros de ordenamiento -->
+    <div class="sorting-options">
+      <div class="sort-dropdown">
+        <button class="sort-btn">Ordenar por: Destacados <i class="fas fa-chevron-down"></i></button>
+        <div class="sort-dropdown-content">
+          <a href="#" data-sort="price-asc">Precio: Menor a Mayor</a>
+          <a href="#" data-sort="price-desc">Precio: Mayor a Menor</a>
+          <a href="#" data-sort="name-asc">Nombre: A - Z</a>
+          <a href="#" data-sort="name-desc">Nombre: Z - A</a>
+          <a href="#" data-sort="bestsellers">Más vendidos</a>
+          <a href="#" data-sort="featured">Destacados</a>
+          <a href="#" data-sort="oldest">Más viejo a más nuevo</a>
+          <a href="#" data-sort="newest">Más nuevo a más viejo</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lista de productos -->
+    <div class="products-grid">
+      <!-- Producto 1 -->
+      <div class="product-card" data-price="1299" data-name="Kit Luminex Dental" data-sales="150" data-date="2023-01-15" data-featured="true">
+        <div class="product-image">
+          <img src="https://acdn-us.mitiendanube.com/stores/005/734/330/products/luminex-producto-42529125212a73236117381002094851-1024-1024.webp" alt="Kit Luminex Dental">
+        </div>
+        <div class="product-info">
+          <h3 class="product-title">Kit Luminex Dental</h3>
+          <div class="product-price">       
+            <span class="current-price">$1,299 MXN</span>
+            <span class="old-price">$3,249 MXN</span>
+          </div>
+          <button class="add-to-cart-btn">Agregar al carrito</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <!-- Footer (igual que en index.html) -->
+  <footer class="footer" id="contacto">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="https://acdn-us.mitiendanube.com/stores/005/734/330/themes/common/logo-1131374604-1737670255-836905003dbe61f435d3b9aa1cd70d301737670255-320-0.webp" alt="Luminex Dental" />
+          <p>Blanqueamiento dental profesional en casa.</p>
+        </div>
+        <div class="footer-links">
+          <h3>Enlaces</h3>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#producto">Producto</a></li>
+            <li><a href="#testimonios">Opiniones</a></li>
+            <li><a href="#faq">Preguntas Frecuentes</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h3>Contacto</h3>
+          <p><i class="fas fa-envelope"></i> info@luminexdental.com</p>
+          <p><i class="fas fa-phone"></i> +52 55 1234 5678</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 Luminex Dental. Todos los derechos reservados.</p>
+        <div class="legal-links">
+          <a href="#">Términos y condiciones</a>
+          <a href="#">Política de privacidad</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

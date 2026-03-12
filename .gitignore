@@ -1,0 +1,30 @@
+# Dependencias de Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archivos de entorno
+.env
+.env.local
+
+# Sistemas operativos
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDEs / editores
+.vscode/
+.idea/
+
+# Build / salidas
+dist/
+build/
+
+# Logs
+*.log
+
+# Otros
+coverage/
+__pycache__/
+*.pyc

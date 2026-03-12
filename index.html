@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Luminex Dental - Blanqueamiento Dental Profesional</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+  <!-- Barra de navegación -->
+  <!-- Barra de navegación -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-top">
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+          <img src="https://acdn-us.mitiendanube.com/stores/005/734/330/themes/common/logo-1131374604-1737670255-836905003dbe61f435d3b9aa1cd70d301737670255-320-0.webp" alt="Luminex Dental" />
+        </a>
+ 
+
+ 
+        <!-- Menú de cuenta -->
+        <div class="account-container">
+          <div class="account-dropdown">
+            <button class="account-btn" aria-label="Abrir menú de cuenta">
+  Cuenta <i class="fas fa-chevron-down"></i>
+</button>
+ 
+ 
+            <!-- Si NO hay sesión -->
+            <div class="dropdown-content" id="accountGuest" style="display: none;">
+ 
+              <form action="login.html" method="get">
+                <button type="submit" class="login-btn">Iniciar Sesión</button>
+              </form>
+              <div class="register-link">¿Eres nuevo? <a href="register.html">Registrar</a></div>
+            </div>
+ 
+            <!-- Si HAY sesión -->
+            <div class="dropdown-content" id="accountLogged" style="display: none;">
+              <p>Hola, <span id="dropdownUserName"></span> 👋</p>
+              <button id="dropdownLogout" class="login-btn">Cerrar sesión</button>
+            </div>
+          </div>
+ 
+         
+ 
+                    <!-- Dentro de <div class="account-container">, después del botón COMPRAR AHORA -->
+          <div class="accessibility-menu">
+  <button class="accessibility-btn" aria-label="Menú de accesibilidad">
+    <i class="fas fa-universal-access"></i>
+  </button>
+  <div class="accessibility-dropdown">
+    <div class="accessibility-option">
+      <span>Accesibilidad</span>
+      <div class="accessibility-submenu">
+        <div class="submenu-item">
+          <span>Modo oscuro</span>
+         <label class="switch">
+  <input type="checkbox" id="darkModeToggle" aria-label="Activar modo oscuro">
+  <span class="slider round"></span>
+</label>
+ 
+ 
+        </div>
+        <div class="submenu-item">
+          <span>Lector para ciegos</span>
+          <label class="switch">
+  <input type="checkbox" id="screenReaderToggle" aria-label="Activar lector para ciegos">
+  <span class="slider round"></span>
+</label>
+ 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+ 
+ 
+        </div>
+ 
+        <!-- Menú móvil -->
+        <div class="menu-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+ 
+      <!-- Navegación secundaria -->
+      <div class="nav-bottom">
+        <ul class="nav-menu">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#featured-product">Producto</a></li>
+          <li><a href="#testimonios">Opiniones</a></li>
+          <li><a href="#faq">Preguntas Frecuentes</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+ 
+  <!-- Hero Section -->
+  <section class="hero" id="inicio">
+    <div class="container">
+      <div class="hero-content">
+        <h1>BLANQUEAMIENTO DENTAL PROFESIONAL EN CASA</h1>
+        <p>Consigue una sonrisa más blanca y brillante con nuestro sistema de blanqueamiento dental profesional.</p>
+        <a href="ComprarProducto.html" class="btn btn-primary">COMPRAR AHORA</a>
+        <div class="hero-badges">
+          <div class="badge badge-green"><i class="fas fa-check"></i> Envío gratis</div>
+          <div class="badge badge-green"><i class="fas fa-check"></i> Garantía de satisfacción</div>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="https://acdn-us.mitiendanube.com/stores/005/734/330/products/luminex-producto-42529125212a73236117381002094851-640-0.png" alt="Kit Luminex Dental" />
+      </div>
+    </div>
+  </section>
+ 
+  <!-- Sección Beneficios -->
+  <section class="benefits">
+    <div class="container">
+      <h2>¿POR QUÉ ELEGIR LUMINEX DENTAL?</h2>
+      <div class="benefits-grid">
+        <div class="benefit-item"><i class="fas fa-bolt"></i><h3>Resultados Rápidos</h3><p>Dientes más blancos desde la primera aplicación.</p></div>
+        <div class="benefit-item"><i class="fas fa-tooth"></i><h3>Seguro para el esmalte</h3><p>Fórmula profesional sin dañar tus dientes.</p></div>
+        <div class="benefit-item"><i class="fas fa-home"></i><h3>Uso en casa</h3><p>Tratamiento profesional sin salir de casa.</p></div>
+        <div class="benefit-item"><i class="fas fa-dollar-sign"></i><h3>Precio accesible</h3><p>Una fracción del costo en consultorio dental.</p></div>
+      </div>
+    </div>
+  </section>
+ 
+<!-- Sección Carrusel Simple -->
+<section class="simple-carousel-section" id="producto">
+  <div class="container">
+    <div class="simple-carousel-container">
+      <div class="simple-carousel">
+        <!-- Imagen 1 -->
+        <div class="simple-slide active">
+          <img src="https://acdn-us.mitiendanube.com/stores/005/734/330/themes/baires/1-slide-1737955864964-2903436791-fa2e43b39c6c403d67ad51e4a01e41581737955865-1920-1920.gif?194120072" alt="Luminex - Blanqueamiento dental seguro" class="carousel-img">
+        </div>
+       
+        <!-- Imagen 2 -->
+        <div class="simple-slide">
+          <img src="https://acdn-us.mitiendanube.com/stores/005/734/330/themes/baires/1-slide-1737756343789-7584350046-73939c459d6e3808162b8bc29cb8a33a1737756344-1920-1920.png?194120072" alt="Tecnología Dual-LED de Luminex" class="carousel-img">
+        </div>
+       
+        <!-- Imagen 3 -->
+        <div class="simple-slide">
+          <img src="https://acdn-us.mitiendanube.com/stores/005/734/330/themes/baires/slide-1739492600873-7886879669-407326d9019a66e1ac02df513546cf821739492604.gif?194120072" alt="Beneficios de Luminex" class="carousel-img">
+        </div>
+      </div>
+     
+      <!-- Controles del carrusel -->
+      <button class="carousel-control prev" aria-label="Ver imagen anterior del carrusel">
+  <i class="fas fa-chevron-left"></i>
+</button>
+ 
+      <button class="carousel-control next" aria-label="Ver imagen siguiente del carrusel">
+  <i class="fas fa-chevron-right"></i>
+</button>
+ 
+     
+      <!-- Indicadores -->
+      <div class="carousel-indicators">
+        <span class="indicator active"></span>
+        <span class="indicator"></span>
+        <span class="indicator"></span>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- Sección Modo de Uso -->
+<section class="usage-steps">
+  <div class="container">
+    <h2>MODO DE USO DEL KIT LUMINEX</h2>
+    <div class="steps-container">
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h3>ENJUAGA TU BOCA CON AGUA</h3>
+          <p>Prepara tus dientes para el tratamiento.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h3>APLICA EL GEL LUMINEX SOBRE TUS DIENTES</h3>
+          <p>Usa la cantidad adecuada para cubrir tus dientes.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <h3>PON LA BOQUILLA DEL LED EN TU BOCA Y ENCIENDE LA LUZ</h3>
+          <p>Asegúrate de colocarla correctamente.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-number">4</div>
+        <div class="step-content">
+          <h3>DEJAR ACTUAR POR 15 MIN LA LUZ LED AZUL Y DESPUÉS 10 MIN EN COLOR ROJO</h3>
+          <p>Tiempo total: 25 minutos por sesión.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-number">5</div>
+        <div class="step-content">
+          <h3>ENJUAGA TU BOCA CON AGUA Y LIMPIA EL ACELERADOR</h3>
+          <p>Mantén tu kit limpio después de cada uso.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-number">6</div>
+        <div class="step-content">
+          <h3>DISFRUTA DE TU NUEVA SONRISA</h3>
+          <p>Repite el proceso según sea necesario.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- Sección de Producto Destacado -->
+<section class="featured-product" id="featured-product">
+  <div class="container">
+    <h2>NUESTRO PRODUCTO ESTRELLA</h2>
+   
+    <div class="product-highlight">
+      <!-- Tarjeta de producto (similar a productos.html) -->
+      <div class="product-card featured">
+        <div class="product-image">
+          <img src="https://acdn-us.mitiendanube.com/stores/005/734/330/products/luminex-producto-42529125212a73236117381002094851-1024-1024.webp" alt="Kit Luminex Dental">
+          <div class="product-badge">MÁS VENDIDO</div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-title">KIT LUMINEX PRO-WHITE</h3>
+          <div class="product-rating">
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span class="rating-count">(1,278 valoraciones)</span>
+          </div>
+         
+          <div class="product-price">
+            <span class="current-price">$1,299 MXN</span>
+            <span class="old-price">$1,899 MXN</span>
+            <span class="discount">-32%</span>
+          </div>
+         
+          <div class="product-shipping">
+            <i class="fas fa-truck"></i> Envío <strong>GRATIS</strong> a todo México
+          </div>
+         
+          <div class="quantity-selector">
+            <label>Cantidad:</label>
+            <div class="quantity-controls">
+              <button class="quantity-btn minus">-</button>
+<label for="quantity">Cantidad</label>
+<input type="number" class="quantity-input" id="quantity" value="1" min="1">
+ 
+<button class="quantity-btn plus">+</button>
+            </div>
+          </div>
+         
+          <div class="product-actions">
+            <button class="buy-now" id="buyNowBtn">Comprar ahora</button>
+          </div>
+        </div>
+      </div>
+     
+      <!-- Beneficios del producto -->
+      <div class="product-benefits">
+        <h3>BENEFICIOS DEL KIT LUMINEX</h3>
+        <ul>
+          <li><i class="fas fa-check-circle"></i> Resultados visibles desde el primer uso</li>
+          <li><i class="fas fa-check-circle"></i> Tecnología LED profesional en casa</li>
+          <li><i class="fas fa-check-circle"></i> Fórmula segura para el esmalte dental</li>
+          <li><i class="fas fa-check-circle"></i> Efecto duradero hasta por 2 años</li>
+          <li><i class="fas fa-check-circle"></i> Incluye gel blanqueador y acelerador LED</li>
+          <li><i class="fas fa-check-circle"></i> Aprobado por dentistas</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+ 
+  <!-- Testimonios o Opiniones -->
+  <section class="testimonials" id="testimonios">
+    <div class="container">
+      <h2>OPINIONES DE NUESTROS CLIENTES</h2>
+      <div class="testimonials-slider">
+        <div class="testimonial">
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p>"Obtuve resultados increíbles desde el primer uso, me basto con usarlo solo 3 días"</p>
+          <div class="client"><img src="https://acdn-us.mitiendanube.com/stores/005/734/330/themes/baires/img-1281419553-1737745285-f9ca4846c58376cadcae4ed51cd8be271737745285.png?194120072" alt="Cliente"><span>Alejandra Valdez</span></div>
+        </div>
+        <div class="testimonial">
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p>"¡El kit es muy fácil de usar y los resultados son muy notables, es una excelente inversión!"</p>
+          <div class="client"><img src="https://acdn-us.mitiendanube.com/stores/005/734/330/themes/baires/img-882437814-1737745285-8160755b278a3d2cc74fd1c8e43026ec1737745286.png?194120072" alt="Cliente"><span>Leonardo Garza</span></div>
+        </div>
+        <div class="testimonial">
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+          <p>"¡Estoy encantada con los resultados! Mis dientes están más blancos en solo una semana, y no sentí nada de sensibilidad"</p>
+          <div class="client"><img src="https://acdn-us.mitiendanube.com/stores/005/734/330/themes/baires/img-1774346528-1737745286-c4e00e8c4c6cd39f6ef46206d9cf11bd1737745287.png?194120072" alt="Cliente"><span>Mariana González</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <h2>PREGUNTAS FRECUENTES</h2>
+      <div class="faq-container">
+        <div class="faq-item">
+          <button class="faq-question">¿Cuánto tiempo tardan en verse los resultados?</button>
+          <div class="faq-answer">
+            <p>La mayoría nota diferencia después de la primera aplicación. Se recomienda usarlo 7-10 días consecutivos.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">¿Es seguro para mis dientes?</button>
+          <div class="faq-answer">
+            <p>Sí, la fórmula es segura para el esmalte. No se recomienda en personas con caries o encías sensibles.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">¿Cuánto dura el efecto?</button>
+          <div class="faq-answer">
+            <p>De 6 meses a 2 años dependiendo de tus hábitos. Puedes hacer mantenimientos cada pocos meses.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">¿Qué incluye el kit?</button>
+          <div class="faq-answer">
+            <p>Gel blanqueador (4 jeringas), férulas, luz LED, instrucciones y caja.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container">
+      <h2>¿LISTO PARA UNA SONRISA MÁS BLANCA?</h2>
+      <p>No esperes más para lucir la sonrisa que siempre has querido</p>
+      <a href="ComprarProducto.html" class="btn">ORDENAR AHORA</a>
+    </div>
+  </section>
+ 
+  <!-- Footer -->
+  <footer class="footer" id="contacto">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="https://acdn-us.mitiendanube.com/stores/005/734/330/themes/common/logo-1131374604-1737670255-836905003dbe61f435d3b9aa1cd70d301737670255-320-0.webp" alt="Luminex Dental" />
+          <p>Blanqueamiento dental profesional en casa.</p>
+        </div>
+        <div class="footer-links">
+          <h3>Enlaces</h3>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#featured-product">Producto</a></li>
+            <li><a href="#testimonios">Opiniones</a></li>
+            <li><a href="#faq">Preguntas Frecuentes</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h3>Contacto</h3>
+          <p><i class="fas fa-envelope"></i> info@luminexdental.com</p>
+          <p><i class="fas fa-phone"></i> +52 55 1234 5678</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 Luminex Dental. Todos los derechos reservados.</p>
+        <div class="legal-links">
+          <a href="#">Términos y condiciones</a>
+          <a href="#">Política de privacidad</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+ 
+ 
+ 
+ 
+  <!-- Carrito lateral -->
+<div class="cart-sidebar">
+  <div class="cart-header">
+    <h3>Tu carrito</h3>
+    <button class="close-cart" aria-label="Cerrar carrito">
+  <i class="fas fa-times"></i>
+</button>
+ 
+  </div>
+  <div class="cart-items">
+    <!-- Los productos se agregarán dinámicamente aquí -->
+  </div>
+  <div class="cart-total">
+    <div class="subtotal">
+      <span>Subtotal:</span>
+      <span class="subtotal-amount">$0.00</span>
+    </div>
+    <div class="shipping">
+      <span>Envío:</span>
+      <span class="shipping-amount">Gratis</span>
+    </div>
+    <div class="total">
+      <span>Total:</span>
+      <span class="total-amount">$0.00</span>
+    </div>
+    <button class="btn-checkout">Comprar</button>
+  </div>
+</div>
+
+
+
+<div class="cart-overlay"></div>
+ 
+ 
+ 
+ 
+ 
+  <!-- Botón de accesibilidad flotante -->
+  <button id="accessibilityBtn" class="accessibility-btn" aria-label="Abrir menú de accesibilidad">
+  <i class="fas fa-universal-access"></i>
+</button>
+ 
+ 
+  <!-- Panel de accesibilidad -->
+  <!-- Panel de accesibilidad -->
+<div id="accessibilityPanel" class="accessibility-panel">
+  <h3>Opciones de accesibilidad</h3>
+ 
+  <div class="accessibility-option">
+    <label for="fontSize">Tamaño de fuente:</label>
+    <select id="fontSize">
+      <option value="small">Pequeña</option>
+      <option value="medium" selected>Mediana</option>
+      <option value="large">Grande</option>
+      <option value="xlarge">Extra grande</option>
+    </select>
+  </div>
+ 
+  <div class="accessibility-option">
+    <label for="themeMode">Tema:</label>
+    <select id="themeMode">
+      <option value="device">Tema del dispositivo</option>
+      <option value="light">Modo normal</option>
+      <option value="dark">Modo nocturno</option>
+    </select>
+  </div>
+ 
+ 
+  <div class="accessibility-option">
+    <label>Simplificar animaciones:</label>
+    <label class="switch">
+  <input type="checkbox" id="reduceMotion" aria-label="Activar modo de menos animaciones">
+  <span class="slider round"></span>
+</label>
+ 
+  </div>
+ 
+  <button id="saveAccessibility" class="btn-accessibility">Guardar preferencias</button>
+</div>
+ 
+ 
+ 
+ 
+ 
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+ 

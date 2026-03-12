@@ -1,0 +1,199 @@
+/* Fondo general con degradado elegante */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom right, #f3f9ff, #d6eaff);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+    animation: fadeIn 0.8s ease-in;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  /* Contenedor principal */
+  .register-container {
+    width: 100%;
+    max-width: 420px;
+    padding: 40px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+    animation: fadeIn 0.6s ease-in-out;
+  }
+  
+  /* Logo */
+  .register-logo {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  
+  .register-logo img {
+    height: 45px;
+  }
+  
+  /* Título */
+  h1 {
+    font-size: 22px;
+    color: #2a9df4;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+  
+  /* Grupo de inputs */
+  .form-group {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .form-group i {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    color: #aaa;
+    pointer-events: none;
+  }
+  
+  /* Íconos de validación en tiempo real */
+  .form-group.valid .form-input {
+    border-color: #2ecc71;
+  }
+  
+  .form-group.invalid .form-input {
+    border-color: #e74c3c;
+    background-color: #fff5f5;
+  }
+  
+  .form-group.valid::after,
+  .form-group.invalid::after {
+    content: '';
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 14px;
+  }
+  
+  .form-group.valid::after {
+    content: '\f00c'; /* check */
+    color: #2ecc71;
+  }
+  
+  .form-group.invalid::after {
+    content: '\f00d'; /* xmark */
+    color: #e74c3c;
+  }
+  
+  /* Estilo del input */
+  .form-input {
+    width: 100%;
+    padding: 12px 12px 12px 40px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    font-size: 14px;
+    transition: 0.3s;
+    box-sizing: border-box;
+  }
+  
+  .form-input:focus {
+    border-color: #2a9df4;
+    box-shadow: 0 0 0 3px rgba(42, 157, 244, 0.15);
+    outline: none;
+  }
+  
+  /* Campo de contraseña */
+  .password-input {
+    position: relative;
+  }
+  
+  .toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #aaa;
+    transition: color 0.3s;
+  }
+  
+  .toggle-password:hover {
+    color: #2a9df4;
+  }
+  
+  /* Mensajes */
+  .error-message {
+    color: #e74c3c;
+    font-size: 12px;
+    margin-top: 5px;
+    display: none;
+  }
+  
+  .password-hint {
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+  }
+  
+  /* Botón */
+  .register-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #2a9df4;
+    border: none;
+    color: white;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .register-btn:hover {
+    background-color: #1d7bc4;
+  }
+  
+  /* Enlace para login */
+  .login-link {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 14px;
+  }
+  
+  .login-link a {
+    color: #2a9df4;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  
+  .login-link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive */
+  @media (max-width: 480px) {
+    .register-container {
+      padding: 20px;
+    }
+  }
+  
+
+  .home-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    z-index: 10;
+    transition: transform 0.3s ease;
+}
+.home-icon:hover {
+    transform: scale(1.05);
+}

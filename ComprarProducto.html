@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kit Luminex Pro-White - Luminex Dental</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+  <!-- Barra de navegación -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-top">
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+          <img src="https://acdn-us.mitiendanube.com/stores/005/734/330/themes/common/logo-1131374604-1737670255-836905003dbe61f435d3b9aa1cd70d301737670255-320-0.webp" alt="Luminex Dental" />
+        </a>
+ 
+
+ 
+        <!-- Menú de cuenta -->
+        <div class="account-container">
+          <div class="account-dropdown">
+            <button class="account-btn" aria-label="Abrir menú de cuenta">
+  Cuenta <i class="fas fa-chevron-down"></i>
+</button>
+ 
+ 
+            <!-- Si NO hay sesión -->
+            <div class="dropdown-content" id="accountGuest" style="display: none;">
+ 
+              <form action="login.html" method="get">
+                <button type="submit" class="login-btn">Iniciar Sesión</button>
+              </form>
+              <div class="register-link">¿Eres nuevo? <a href="register.html">Registrar</a></div>
+            </div>
+ 
+            <!-- Si HAY sesión -->
+            <div class="dropdown-content" id="accountLogged" style="display: none;">
+              <p>Hola, <span id="dropdownUserName"></span> 👋</p>
+              <button id="dropdownLogout" class="login-btn">Cerrar sesión</button>
+            </div>
+          </div>
+ 
+         
+ 
+                    <!-- Dentro de <div class="account-container">, después del botón COMPRAR AHORA -->
+          <div class="accessibility-menu">
+  <button class="accessibility-btn" aria-label="Menú de accesibilidad">
+    <i class="fas fa-universal-access"></i>
+  </button>
+  <div class="accessibility-dropdown">
+    <div class="accessibility-option">
+      <span>Accesibilidad</span>
+      <div class="accessibility-submenu">
+        <div class="submenu-item">
+          <span>Modo oscuro</span>
+         <label class="switch">
+  <input type="checkbox" id="darkModeToggle" aria-label="Activar modo oscuro">
+  <span class="slider round"></span>
+</label>
+ 
+ 
+        </div>
+        <div class="submenu-item">
+          <span>Lector para ciegos</span>
+          <label class="switch">
+  <input type="checkbox" id="screenReaderToggle" aria-label="Activar lector para ciegos">
+  <span class="slider round"></span>
+</label>
+ 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+ 
+ 
+        </div>
+ 
+        <!-- Menú móvil -->
+        <div class="menu-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+ 
+      <!-- Navegación secundaria -->
+      <div class="nav-bottom">
+        <ul class="nav-menu">
+          <li><a href="index.html#inicio">Inicio</a></li>
+          <li><a href="index.html#featured-product">Producto</a></li>
+          <li><a href="index.html#testimonios">Opiniones</a></li>
+          <li><a href="index.html#faq">Preguntas Frecuentes</a></li>
+          <li><a href="index.html#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sección de producto -->
+  <section class="product-page">
+    <div class="container">
+        <div class="product-container">
+          <!-- Galería de miniaturas -->
+          <div class="image-gallery">
+            <img src="https://acdn-us.mitiendanube.com/stores/005/734/330/products/1-0bab37385c92a097bf17380998264909-1024-1024.webp" class="thumbnail active" onclick="changeImage(this, 'https://acdn-us.mitiendanube.com/stores/005/734/330/products/luminex-producto-42529125212a73236117381002094851-1024-1024.webp')" alt="Vista frontal">
+            <img src="https://acdn-us.mitiendanube.com/stores/005/734/330/products/2-4a136c60e1d3ed8cbb17380998263479-1024-1024.webp" class="thumbnail" onclick="changeImage(this, 'https://acdn-us.mitiendanube.com/stores/005/734/330/products/img-20240214-wa00021-5a0d7a9a5b5c5f3b6a17097349875472-320-0.webp')" alt="Vista lateral">
+            <img src="https://acdn-us.mitiendanube.com/stores/005/734/330/products/3-4038cb24c8c399bb6d17380998272412-1024-1024.webp" class="thumbnail" onclick="changeImage(this, 'https://acdn-us.mitiendanube.com/stores/005/734/330/products/img-20240214-wa00031-6a9c7b0d6c0d7f2c6b17097349883405-320-0.webp')" alt="Componentes">
+            <img src="https://acdn-us.mitiendanube.com/stores/005/734/330/products/luminex-producto-52222335c62bd359ab17393294728263-1024-1024.webp" class="thumbnail" onclick="changeImage(this, 'https://acdn-us.mitiendanube.com/stores/005/734/330/products/img-20240214-wa00041-2a3c9e9c1c3c7b3a6e17097349891476-320-0.webp')" alt="En uso">
+            <img src="https://acdn-us.mitiendanube.com/stores/005/734/330/products/luminex-producto-4-376e9600172425a34617393308403957-1024-1024.webp" class="thumbnail" onclick="changeImage(this, 'https://acdn-us.mitiendanube.com/stores/005/734/330/products/img-20240214-wa00051-3a7c8f8e4c4c6a3a6d17097349899456-320-0.webp')" alt="Resultados">
+            <img src="https://acdn-us.mitiendanube.com/stores/005/734/330/products/luminex-producto-5-9d4a590dcd4c09640f17393308404054-1024-1024.webp" class="thumbnail" onclick="changeImage(this, 'https://acdn-us.mitiendanube.com/stores/005/734/330/products/img-20240214-wa00061-4a5c7e7d5d5c8b4a6c17097349907427-320-0.webp')" alt="Comparación">
+            <img src="https://acdn-us.mitiendanube.com/stores/005/734/330/products/luminex-producto-6-f4c27e57e06f56296b17393308404682-1024-1024.webp" class="thumbnail" onclick="changeImage(this, 'https://acdn-us.mitiendanube.com/stores/005/734/330/products/img-20240214-wa00071-5a2c6d6c6c6c9a5a6b17097349915406-320-0.webp')" alt="Certificaciones">
+          </div>
+          
+          <!-- Imagen principal -->
+          <div class="main-image-container">
+            <img id="mainImage" src="https://acdn-us.mitiendanube.com/stores/005/734/330/products/luminex-producto-42529125212a73236117381002094851-1024-1024.webp" class="main-image" onclick="openModal(this.src)" alt="Kit Luminex Pro-White">
+          </div>
+          
+          <!-- Detalles del producto -->
+          <div class="product-details">
+            <h1 class="product-title">KIT LUMINEX PRO-WHITE</h1>
+            <div class="brand">Marca: Luminex Dental</div>
+            
+            <div class="rating">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <span class="rating-count">(1,278 valoraciones)</span>
+            </div>
+            
+            <hr>
+            
+            <div class="price-container">
+              <span class="current-price">$1,299.00</span>
+              <span class="old-price">$1,899.00</span>
+              <span class="discount">-32%</span>
+            </div>
+            
+            <div class="shipping-info">
+              <i class="fas fa-truck"></i> Envío <strong>GRATIS</strong> a todo México
+            </div>
+            
+            <div class="availability">
+              <i class="fas fa-check-circle"></i> Disponible
+            </div>
+            
+            <div class="quantity-selector">
+              <label class="quantity-label">Cantidad:</label>
+              <div class="quantity-controls">
+              <button class="quantity-btn minus">-</button>
+              <input type="number" class="quantity-input" id="quantity" value="1" min="1">
+              <button class="quantity-btn plus">+</button>
+              </div>
+            </div>
+            
+            <div class="action-buttons">
+              <button class="buy-now" id="buyNowBtn">Comprar ahora</button>
+            </div>
+          </div>
+        </div>
+
+
+            <!-- Descripción del producto -->
+            <div class="product-description">
+                <h2>Descripción del producto</h2>
+                <ul>
+                <li>Luminex es un innovador sistema de blanqueamiento dental diseñado para transformar tu sonrisa desde casa con resultados de grado profesional.</li>
+                <li>Utiliza la avanzada tecnología DUAL-LED 32X, que trabaja en combinación con nuestra fórmula especializada a base de peróxido de carbamida, garantizando un blanqueamiento rápido, efectivo y seguro para tus dientes.</li>
+                <li>Resultados hasta por 2 años</li>
+                <li>Tecnología aprobada por FDA</li>
+                </ul>
+            </div>
+            </div>
+            
+            <!-- Modal para imagen ampliada -->
+            <div id="imageModal" class="modal">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImage">
+            </div>
+
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (igual que en index.html) -->
+  <footer class="footer" id="contacto">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="https://acdn-us.mitiendanube.com/stores/005/734/330/themes/common/logo-1131374604-1737670255-836905003dbe61f435d3b9aa1cd70d301737670255-320-0.webp" alt="Luminex Dental" />
+          <p>Blanqueamiento dental profesional en casa.</p>
+        </div>
+        <div class="footer-links">
+          <h3>Enlaces</h3>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#producto">Producto</a></li>
+            <li><a href="#testimonios">Opiniones</a></li>
+            <li><a href="#faq">Preguntas Frecuentes</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h3>Contacto</h3>
+          <p><i class="fas fa-envelope"></i> info@luminexdental.com</p>
+          <p><i class="fas fa-phone"></i> +52 55 1234 5678</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 Luminex Dental. Todos los derechos reservados.</p>
+        <div class="legal-links">
+          <a href="#">Términos y condiciones</a>
+          <a href="#">Política de privacidad</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Carrito lateral -->
+  <div class="cart-sidebar">
+    <div class="cart-header">
+      <h3>Tu carrito</h3>
+      <button class="close-cart"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-items">
+      <!-- Los productos se agregarán dinámicamente aquí -->
+    </div>
+    <div class="cart-total">
+      <div class="subtotal">
+        <span>Subtotal:</span>
+        <span class="subtotal-amount">$0.00</span>
+      </div>
+      <div class="shipping">
+        <span>Envío:</span>
+        <span class="shipping-amount">Gratis</span>
+      </div>
+      <div class="total">
+        <span>Total:</span>
+        <span class="total-amount">$0.00</span>
+      </div>
+      <button class="btn-checkout">Comprar</button>
+    </div>
+  </div>
+  <div class="cart-overlay"></div>
+
+
+<!-- Botón de accesibilidad flotante -->
+  <button id="accessibilityBtn" class="accessibility-btn" aria-label="Abrir menú de accesibilidad">
+    <i class="fas fa-universal-access"></i>
+  </button>
+
+    <!-- Panel de accesibilidad -->
+<div id="accessibilityPanel" class="accessibility-panel">
+  <h3>Opciones de accesibilidad</h3>
+ 
+  <div class="accessibility-option">
+    <label for="fontSize">Tamaño de fuente:</label>
+    <select id="fontSize">
+      <option value="small">Pequeña</option>
+      <option value="medium" selected>Mediana</option>
+      <option value="large">Grande</option>
+      <option value="xlarge">Extra grande</option>
+    </select>
+  </div>
+ 
+  <div class="accessibility-option">
+    <label for="themeMode">Tema:</label>
+    <select id="themeMode">
+      <option value="device">Tema del dispositivo</option>
+      <option value="light">Modo normal</option>
+      <option value="dark">Modo nocturno</option>
+    </select>
+  </div>
+ 
+ 
+  <div class="accessibility-option">
+    <label>Simplificar animaciones:</label>
+    <label class="switch">
+  <input type="checkbox" id="reduceMotion" aria-label="Activar modo de menos animaciones">
+  <span class="slider round"></span>
+</label>
+ 
+  </div>
+ 
+  <button id="saveAccessibility" class="btn-accessibility">Guardar preferencias</button>
+</div>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>

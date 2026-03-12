@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Luminex Dental</title>
+    <link rel="stylesheet" href="stylesLogin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Estilos base */
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #f3f9ff, #d6eaff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            transition: background 0.3s ease;
+        }
+
+        /* Modo oscuro */
+        body.dark-mode {
+            background: linear-gradient(to bottom right, #3a3a3a, #3a3a3a);
+            color: #ffffff;
+        }
+
+        /* Modo normal (light) */
+        body.light-mode {
+            background: linear-gradient(to bottom right, #f3f9ff, #d6eaff);
+        }
+
+        /* Contenedor del login */
+        .login-container {
+            width: 100%;
+            max-width: 420px;
+            padding: 40px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        body.dark-mode .login-container {
+            background: #2d3748;
+            color: #ffffff;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Inputs */
+        .form-group input {
+            background: #f8f9fa;
+            border: 1px solid #ddd;
+        }
+
+        body.dark-mode .form-group input {
+            background: #4a5568;
+            border-color: #4a5568;
+            color: #ffffff;
+        }
+
+        /* Botón */
+        .login-btn {
+            background-color: #2a9df4;
+            color: white;
+        }
+
+        body.dark-mode .login-btn {
+            background-color: #3182ce;
+        }
+
+        /* Enlaces */
+        .create-account a {
+            color: #2a9df4;
+        }
+
+        body.dark-mode .create-account a {
+            color: #63b3ed;
+        }
+
+        /* Icono de casa */
+        .home-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            color: #2a9df4;
+            cursor: pointer;
+            z-index: 10;
+            transition: transform 0.3s ease;
+        }
+        
+        .home-icon:hover {
+            transform: scale(1.1);
+            color: #1d7bc4;
+        }
+
+        body.dark-mode .home-icon {
+            color: #a0a0a0;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="home-icon" aria-label="Volver al inicio">
+        <i class="fas fa-home"></i>
+    </a>
+    
+    <div class="login-container">
+        <div class="login-logo">
+            <img src="https://acdn-us.mitiendanube.com/stores/005/734/330/themes/common/logo-1131374604-1737670255-836905003dbe61f435d3b9aa1cd70d301737670255-320-0.webp" alt="Luminex Dental">
+        </div>
+        
+        <div class="login-box">
+            <h1>Iniciar sesión</h1>
+            
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Correo electrónico</label>
+                    <input type="email" id="loginEmail" name="email" required>
+                </div>
+                
+                <div class="form-group password-group">
+                    <label for="loginPassword">Contraseña</label>
+                    <div class="password-input">
+                        <input type="password" id="loginPassword" name="password" required>
+                        <span class="toggle-password" id="togglePassword">
+                            <i class="far fa-eye"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div id="loginError" class="error-message" style="display: none; color: red; margin-top: 10px;"></div>
+
+                
+                <button type="submit" class="login-btn">Continuar</button>
+                
+                <div class="create-account">
+                    <p>¿No tienes una cuenta? <a href="register.html">Crear cuenta</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Aplicar tema al cargar la página
+        document.addEventListener('DOMContentLoaded', function() {
+            const preferences = JSON.parse(localStorage.getItem('accessibilityPreferences')) || {};
+            const themeMode = preferences.themeMode || 'device';
+            
+            applyTheme(themeMode);
+        });
+
+        function applyTheme(mode) {
+            // Primero removemos todas las clases de tema
+            document.body.classList.remove('dark-mode', 'light-mode');
+            
+            if (mode === 'device') {
+                // Usar el tema del dispositivo
+                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    document.body.classList.add('dark-mode');
+                } else {
+                    document.body.classList.add('light-mode');
+                }
+            } else if (mode === 'dark') {
+                document.body.classList.add('dark-mode');
+            } else {
+                // 'light' es el valor por defecto
+                document.body.classList.add('light-mode');
+            }
+        }
+
+        // Escuchar cambios en el tema del dispositivo si está en modo automático
+        const preferences = JSON.parse(localStorage.getItem('accessibilityPreferences')) || {};
+        if (preferences.themeMode === 'device') {
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+                applyTheme('device');
+            });
+        }
+    </script>
+</body>
+</html>
